@@ -15,10 +15,11 @@ def barra_progreso(limite):
     print(f"      | {'-' * asteriscos}|")
     print("Espere ", end="")
 
+
 def criptoanalisis(criptograma):
     print("\nPulsa Ctrl-C para abandonar\n")
     print("Probando claves\n")
-    
+
     limite = len(criptograma)
     barra_progreso(limite)
     razones = []
@@ -26,7 +27,7 @@ def criptoanalisis(criptograma):
     claves = []
 
     # Fuerza bruta. Se prueban todas las claves
-    for clave in range (2, limite):
+    for clave in range(2, limite):
         texto_descrifrado = transColumnDescifr.descifrar(criptograma, clave)
         espanol, coef = detectarEspanol.es_espanol(texto_descrifrado)
 
@@ -41,7 +42,7 @@ def criptoanalisis(criptograma):
             claves.append(clave)
 
     if razones == []:
-            return None
+        return None
 
     # Seleccionamos el máximo de r_lex
     maximo = razones.index(max(razones))
