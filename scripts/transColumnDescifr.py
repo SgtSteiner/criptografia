@@ -4,6 +4,7 @@ Descifrado de un cifrado por transposición columnar
 
 import math
 
+
 def descifrar(criptograma, clave):
     num_cols = math.ceil(len(criptograma)/clave)
     num_filas = clave
@@ -18,12 +19,13 @@ def descifrar(criptograma, clave):
         col += 1
 
         if (col == num_cols) or \
-            (col == num_cols - 1 and fila >= num_filas - celdas_vacias):
-           
-           col = 0
-           fila += 1
+                (col == num_cols - 1 and fila >= num_filas - celdas_vacias):
+
+            col = 0
+            fila += 1
 
     return "".join(texto_plano)
+
 
 if __name__ == "__main__":
     criptograma = input("Introduce el criptograma: ")

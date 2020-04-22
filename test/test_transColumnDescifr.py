@@ -7,9 +7,12 @@ class TestTransColumnDescifr(unittest.TestCase):
         self.assertEqual(descifrar("", 10), "")
 
     def test_full_Descifr(self):
-        criptograma = "ELUTL ARAAE ARSST CEERC DIRET E".replace(" ", "").lower()
-        self.assertEqual(descifrar(criptograma, 8), "elartedelaescriturasecreta")
+        criptograma = "ELUTL ARAAE ARSST CEERC DIRET E".replace(
+            " ", "").lower()
+        self.assertEqual(descifrar(criptograma, 8),
+                         "elartedelaescriturasecreta")
 
     def test_fail_Descifr(self):
         criptograma = "ELUTL ARAAE ARSST".replace(" ", "").lower()
-        self.assertIsNot(descifrar(criptograma, 8), "elartedelaescriturasecreta")
+        self.assertIsNot(descifrar(criptograma, 8),
+                         "elartedelaescriturasecreta")

@@ -18,6 +18,7 @@ ALFABETO = (
     f"{string.punctuation}"
 )
 
+
 def cifrado(modo, texto, clave):
     # Ejecuta el proceso letra a letra
     result = ""
@@ -38,13 +39,14 @@ def cifrado(modo, texto, clave):
                 pos = (pos + clave) % len(ALFABETO)
             elif modo == "d":
                 pos = (pos - clave) % len(ALFABETO)
-                
+
             result += ALFABETO[pos]
-            
+
         # No se cifra/descifra si no se encuentra en el ALFABETO
         else:
             result += simbolo
-    return  result
+    return result
+
 
 if __name__ == "__main__":
     # Guarda la opción deseada

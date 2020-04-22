@@ -22,7 +22,7 @@ class TestTransColumnCifr(unittest.TestCase):
         self.assertEqual(
             cifrar(mensaje, 7),
             "eecsencilarelliineiealaraanstrennelmrmatrantazaeteceeltrtaededoetpeaucnadinneamsrufd"
-            )
+        )
 
     def test_completo_cifrar(self):
         mensaje = "el arte de la medicina consiste en entretener al \
@@ -30,4 +30,4 @@ class TestTransColumnCifr(unittest.TestCase):
         self.assertEqual(
             salida(cifrar(mensaje, 7)).upper(),
             "EECSE NCILA RELLI INEIE ALARA ANSTR ENNEL MRMAT RANTA ZAETE CEELT RTAED EDOET PEAUC NADIN NEAMS RUFD"
-            )
+        )

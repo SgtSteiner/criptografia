@@ -8,6 +8,7 @@ muy empleada antiguamente es la conocida como transposición columnar.
 https://es.wikipedia.org/wiki/Cifrado_por_transposici%C3%B3n
 """
 
+
 def salida(criptograma, bloque=5):
     # Divide una cadena en subcadenas del tamaño indicado en el bloque
     texto = ""
@@ -17,6 +18,7 @@ def salida(criptograma, bloque=5):
         else:
             texto += criptograma[i] + " "
     return texto
+
 
 def cifrar(mensaje, clave):
     # Cada cadena del criptograma es una columna de la lista
@@ -32,6 +34,7 @@ def cifrar(mensaje, clave):
             pos += clave
 
     return "".join(criptograma)
+
 
 if __name__ == "__main__":
     mensaje = input("Introduce el mensaje: ")

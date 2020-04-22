@@ -14,13 +14,13 @@ class TestAtbash(unittest.TestCase):
 
     def test_only_lower_text_reverse(self):
         self.assertEquals(cifrado("NFMWL"), "MUNDO")
-    
+
     def test_only_upper_text(self):
         self.assertEquals(cifrado("MUNDO"), "NFMWL")
-    
+
     def test_lower_and_upper_text(self):
         self.assertEquals(cifrado("MunDO"), "NFMWL")
-    
+
     def test_numeric(self):
         self.assertEquals(cifrado("3421"), "")
 
@@ -28,10 +28,12 @@ class TestAtbash(unittest.TestCase):
         self.assertEquals(cifrado("m3u4n7do"), "NFMWL")
 
     def test_large_text(self):
-        self.assertEquals(cifrado("La mision ha sido un exito"), "OZ NRHRLM SZ HRWL FM VCRGL")
-    
+        self.assertEquals(cifrado("La mision ha sido un exito"),
+                          "OZ NRHRLM SZ HRWL FM VCRGL")
+
     def test_large_text_reverse(self):
-        self.assertEquals(cifrado("OZ NRHRLM SZ HRWL FM VCRGL"), "LA MISION HA SIDO UN EXITO")
+        self.assertEquals(cifrado("OZ NRHRLM SZ HRWL FM VCRGL"),
+                          "LA MISION HA SIDO UN EXITO")
 
     def test_only_blank(self):
         self.assertEquals(cifrado("  "), "  ")

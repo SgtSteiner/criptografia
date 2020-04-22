@@ -11,12 +11,12 @@ class TestCesar(unittest.TestCase):
 
     def test_cifra_large_text(self):
         self.assertEqual(
-            cifrado("c", "El ataque sera a las 10:45", 13), 
+            cifrado("c", "El ataque sera a las 10:45", 13),
             "Ry n6n37r 5r4n n yn5 %${()")
 
     def test_decifra_large_text(self):
         self.assertEqual(
-            cifrado("d", "Ry n6n37r 5r4n n yn5 %${()", 13), 
+            cifrado("d", "Ry n6n37r 5r4n n yn5 %${()", 13),
             "El ataque sera a las 10:45")
 
     def test_cifra_only_blank(self):
@@ -27,10 +27,10 @@ class TestCesar(unittest.TestCase):
 
     def test_cifra_zero_key(self):
         self.assertEqual(
-            cifrado("c", "El ataque sera a las 10:45", 0), 
+            cifrado("c", "El ataque sera a las 10:45", 0),
             "El ataque sera a las 10:45")
 
     def test_descifra_zero_key(self):
         self.assertEqual(
-            cifrado("d", "El ataque sera a las 10:45", 0), 
+            cifrado("d", "El ataque sera a las 10:45", 0),
             "El ataque sera a las 10:45")

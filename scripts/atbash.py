@@ -11,6 +11,7 @@ import string
 CLARO = f"{string.ascii_lowercase} "
 CIFRADO = f"{string.ascii_uppercase[::-1]} "
 
+
 def cifrado(texto):
     # Ejecuta el cifrado/descrifrado letra a letra
     salida = ""
@@ -20,6 +21,7 @@ def cifrado(texto):
             indice = CLARO.index(simbolo)
             salida += CIFRADO[indice]
     return salida
+
 
 if __name__ == "__main__":
     texto = input("Introduce un texto a cifrar/descifrar: ")

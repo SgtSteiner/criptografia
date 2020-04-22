@@ -21,12 +21,13 @@ class TestDetectarEspanol(unittest.TestCase):
     def test_text1_es_espanol(self):
         res, coef = es_espanol("El diccionario de texto debe tener en \
             letras mayusculas una palabra por linea")
-        self.assertEqual((res, round(coef,2)), (True, 0.92))
+        self.assertEqual((res, round(coef, 2)), (True, 0.92))
 
     def test_text2_es_espanol(self):
-        res, coef = es_espanol("cancionedificioekrkkfnrkjjlsklkdslklwjmsansdoidflkoiwe")
-        self.assertEqual((res, round(coef,2)), (False, 0.28))
+        res, coef = es_espanol(
+            "cancionedificioekrkkfnrkjjlsklkdslklwjmsansdoidflkoiwe")
+        self.assertEqual((res, round(coef, 2)), (False, 0.28))
 
     def test_text3_es_espanol(self):
         res, coef = es_espanol("cancionedificio")
-        self.assertEqual((res, round(coef,2)), (True, 1.0))
+        self.assertEqual((res, round(coef, 2)), (True, 1.0))
